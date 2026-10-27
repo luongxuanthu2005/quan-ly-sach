@@ -1,58 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Book Management – Laravel MVC
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Giới thiệu
 
-## About Laravel
+Dự án xây dựng hệ thống quản lý sách sử dụng Laravel 13, PHP và MySQL. Hệ thống hỗ trợ quản lý thông tin sách thông qua giao diện web.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Yêu cầu
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+PHP: 8.5.12 (phiên bản môi trường đang sử dụng; cần kiểm tra tính tương thích với Laravel 13)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Composer: Kiểm tra bằng lệnh composer --version
 
-## Learning Laravel
+MySQL: Phiên bản đi kèm XAMPP hoặc phiên bản tương thích với dự án
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Framework: Laravel 13
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Môi trường phát triển: XAMPP, Visual Studio Code
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+Cài đặt
 
-## Agentic Development
+Cài đặt thư viện
+composer install
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Cấu hình môi trường
+Sao chép .env.example thành .env:
+Copy-Item .env.example .env
 
-```bash
-composer require laravel/boost --dev
+Cấu hình cơ sở dữ liệu
+Mở file .env và cấu hình thông tin kết nối MySQL:
 
-php artisan boost:install
-```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=quan-ly-sach
+DB_USERNAME=root
+DB_PASSWORD=
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Tạo cơ sở dữ liệu quan-ly-sach trong MySQL trước khi chạy ứng dụng.
 
-## Contributing
+ Tạo khóa ứng dụng
+php artisan key:generate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ Khởi tạo cơ sở dữ liệu
+php artisan migrate
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+ Chạy ứng dụng
+php artisan serve
 
-## Security Vulnerabilities
+Mở trình duyệt tại địa chỉ:
+http://127.0.0.1:8000
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Chức năng
+Xem danh sách sách.
+Xem chi tiết sách.
+Thêm sách mới.
+Chỉnh sửa thông tin sách.
+Xóa sách.
 
-## License
+Công nghệ sử dụng
+Laravel 13.
+PHP.
+MySQL.
+HTML, CSS, JavaScript.
+Blade Template.
+Git và GitHub.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Thành viên
+Lương Thị Xuân Thu(Nhóm trưởng): chức năng xóa sách và kiểm thử
+La Lan Chi: thiết kế cơ sở dữ liệu, kiểm thử
+Võ Thành Đạt: Thiết kế giao diện và thêm, sửa sách,kiểm thử
+Nguyễn Đoàn Nhật Khánh: thiết kế giao diện chức năng xem sách và kiểm thử
+Huỳnh Hữu Hào: cấu hình Laravel và kết nối MySQL
+
