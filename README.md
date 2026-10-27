@@ -1,10 +1,10 @@
-Book Management – Laravel MVC
+#Book Management – Laravel MVC
 
-Giới thiệu
+##Giới thiệu
 
 Dự án xây dựng hệ thống quản lý sách sử dụng Laravel 13, PHP và MySQL. Hệ thống hỗ trợ quản lý thông tin sách thông qua giao diện web.
 
-Yêu cầu
+##Yêu cầu
 
 PHP: 8.5.12 (phiên bản môi trường đang sử dụng; cần kiểm tra tính tương thích với Laravel 13)
 
@@ -65,7 +65,7 @@ HTML, CSS, JavaScript.
 Blade Template.
 Git và GitHub.
 
-Thành viên
+##Thành viên
 Lương Thị Xuân Thu(Nhóm trưởng): chức năng xóa sách và kiểm thử
 La Lan Chi: thiết kế cơ sở dữ liệu, kiểm thử
 Võ Thành Đạt: Thiết kế giao diện và thêm, sửa sách,kiểm thử
